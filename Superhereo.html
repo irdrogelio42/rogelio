@@ -1,0 +1,87 @@
+<!DOCTYPEhtml >
+< html  lang =" es-es " >
+  < cabeza >
+    < juego de caracteres meta  =" utf-8 " >
+
+    < title > Nuestros superhéroes </ title >
+
+    < enlace  href =" https://fonts.googleapis.com/css?family=Faster+One " rel =" hoja de estilo " >
+    < enlace  rel =" hoja de estilo " href =" estilo.css " >
+  </ cabeza >
+
+  < cuerpo >
+
+      < encabezado >
+
+      </ encabezado >
+
+      < sección >
+
+      </ sección >
+
+    < guión >
+
+     función  asíncrona rellenar ( )  {
+
+      const  requestURL  =  'https://raw.githubusercontent.com/irrogelio42/rogelio/main/superhero.json';
+      const  solicitud  =  nueva  solicitud ( solicitudURL ) ;
+
+      const  respuesta  =  esperar  búsqueda ( solicitud ) ;
+      const  superHeroesText  =  esperar  respuesta . texto ( ) ;
+
+      const  superhéroes  =  JSON . analizar ( superHeroesText ) ;
+      populateHeader ( superhéroes ) ;
+      populateHeroes ( superhéroes ) ;
+
+    }
+
+    función  populateHeader ( obj )  {
+       encabezado  const =  documento . querySelector ( 'encabezado' ) ;
+      const  myH1  =  documento . crearElemento ( 'h1' ) ;
+      miH1 . contenido de texto = obj  . escuadrónNombre ; 
+      encabezado _ agregarNiño ( myH1 ) ;
+
+      const  myPara  =  documento . crearElemento ( 'p' ) ;
+      mi Para . textContent  =  `Ciudad de origen: ${ obj . ciudad natal } // Formado: ${ obj . formado } ` ;
+      encabezado _ appendChild ( myPara ) ;
+    }
+
+    función  poblarHéroes ( obj )  {
+       sección  const =  documento . querySelector ( 'sección' ) ;
+      const  héroes  =  obj . miembros ;
+
+      para  ( const  héroe  de  héroes )  {
+        const  miArticulo  =  documento . createElement ( 'artículo' ) ;
+        const  myH2  =  documento . crearElemento ( 'h2' ) ;
+        const  myPara1  =  documento . crearElemento ( 'p' ) ;
+        const  myPara2  =  documento . crearElemento ( 'p' ) ;
+        const  myPara3  =  documento . crearElemento ( 'p' ) ;
+        const  miLista  =  documento . crearElemento ( 'ul' ) ;
+
+        miH2 . contenido de texto  =  héroe . nombre ;
+        miPara1 . textContent  =  `Identidad secreta: ${ héroe . identidadsecreta } ` ;
+        miPara2 . textContent  =  `Edad: ${ héroe . edad } ` ;
+        miPara3 . textContent  =  'Superpoderes:' ;
+
+        const  superpoderes  =  héroe . poderes ;
+        for  ( potencia constante  de las superpotencias ) {   
+          const  listItem  =  documento . crearElemento ( 'li' ) ;
+          elemento de lista . contenido de texto  =  potencia ;
+          miLista . appendChild ( listItem ) ;
+        }
+
+        miArtículo . agregarNiño ( myH2 ) ;
+        miArtículo . appendChild ( myPara1 ) ;
+        miArtículo . appendChild ( myPara2 ) ;
+        miArtículo . appendChild ( myPara3 ) ;
+        miArtículo . appendChild ( miLista ) ;
+
+        sección _ appendChild ( miArtículo ) ;
+      }
+    }
+
+    poblar ( ) ;
+
+    </ guión >
+  </ cuerpo >
+</ html >
