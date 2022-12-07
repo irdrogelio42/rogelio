@@ -1,0 +1,48 @@
+/* || estilos generales */
+
+html {
+  familia de fuentes :  'helvetica neue' , helvetica , arial , sans-serif;
+}
+
+cuerpo {
+  ancho :  800 píxeles ;
+  margen :  0 automático;
+}
+
+h1 ,  h2 {
+  familia de fuentes :  'Faster One' , cursiva;
+}
+
+/* estilos de encabezado */
+
+h1 {
+  tamaño de fuente :  4 rem ;
+  alineación de texto : centro;
+}
+
+encabezado  p {
+  tamaño de fuente :  1,3 rem ;
+  fuente-peso : negrita;
+  alineación de texto : centro;
+}
+
+/* estilos de sección */
+
+ artículo de sección {
+  ancho :  33 % ;
+  flotante : izquierda;
+}
+
+sección  p {
+  margen :  5 px  0 ;
+}
+
+sección  ul {
+  margen superior :  0 ;
+}
+
+h2 {
+  tamaño de fuente :  2,5 rem ;
+  espaciado entre letras :  -5 px ;
+  margen inferior :  10 px ;
+}
